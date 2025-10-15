@@ -1,15 +1,25 @@
-from functions.write_file import write_file
+
+from functions.run_python_file import run_python_file
 
 def main():
-   
-    print("\n Results for ~~ wait, this isn't lorem ipsum")
-    print(write_file("calculator", "lorem.txt", "wait, this isn't lorem ipsum"))
 
-    print("\n Results for ~~ lorem ipsum dolor sit amet")
-    print(write_file("calculator", "pkg/morelorem.txt", "lorem ipsum dolor sit amet"))
+    print('\nRunning main.py.......')
+    print(run_python_file("calculator", "main.py"))
 
-    print("\n Results for ~~ this should not be allowed")
-    print(write_file("calculator", "/tmp/temp.txt", "this should not be allowed"))
+    print('\nRunning main.py", ["3 + 5"].......')
+    print(run_python_file("calculator", "main.py", ["3 + 5"]))
+
+    print('\nRunning tests.py.......')
+    print(run_python_file("calculator", "tests.py"))
+
+    print('\nRunning ../main.py.......')
+    print(run_python_file("calculator", "../main.py"))
+
+    print('\nRunning nonexistent.py.......')
+    print(run_python_file("calculator", "nonexistent.py"))
+    
+    print("\nRunning lorem.txt.......")
+    print(run_python_file("calculator", "lorem.txt")+'\n')
     
 if __name__ == "__main__":
 
