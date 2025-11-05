@@ -1,6 +1,6 @@
 import os, subprocess
 
-def run_python_file(working_directory, file_path, args=[]):
+def run_python(working_directory, file_path, args=[]):
 
     try:
         target_path = os.path.abspath(os.path.join(working_directory, file_path))
@@ -30,3 +30,4 @@ def run_python_file(working_directory, file_path, args=[]):
 
     except Exception as e:
         return f"Error: executing Python file: {e}"
+    

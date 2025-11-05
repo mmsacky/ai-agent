@@ -1,6 +1,6 @@
 import os 
 
-def write_file(working_directory, file_path, content):
+def write_file_content(working_directory, file_path, content):
     try:
         working_dir = os.path.abspath(working_directory) + os.sep
         target_path = os.path.abspath(os.path.join(working_directory,file_path))

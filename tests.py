@@ -1,25 +1,25 @@
 
-from functions.run_python_file import run_python_file
+from functions.run_python import run_python
 
 def main():
 
     print('\nRunning main.py.......')
-    print(run_python_file("calculator", "main.py"))
+    print(run_python("calculator", "main.py"))
 
     print('\nRunning main.py", ["3 + 5"].......')
-    print(run_python_file("calculator", "main.py", ["3 + 5"]))
+    print(run_python("calculator", "main.py", ["3 + 5"]))
 
     print('\nRunning tests.py.......')
-    print(run_python_file("calculator", "tests.py"))
+    print(run_python("calculator", "tests.py"))
 
     print('\nRunning ../main.py.......')
-    print(run_python_file("calculator", "../main.py"))
+    print(run_python("calculator", "../main.py"))
 
     print('\nRunning nonexistent.py.......')
-    print(run_python_file("calculator", "nonexistent.py"))
+    print(run_python("calculator", "nonexistent.py"))
     
     print("\nRunning lorem.txt.......")
-    print(run_python_file("calculator", "lorem.txt")+'\n')
+    print(run_python("calculator", "lorem.txt")+'\n')
     
 if __name__ == "__main__":
 
